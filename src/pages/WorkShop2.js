@@ -48,7 +48,8 @@ const WorkShop2 = async () => {
   secondP.className = 'mt-4 max-w-2xl text-xl leading-7 text-gray-500 mx-auto'
   addCatButton.className =
     'py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-  cleanButton.className = 'font-medium text-indigo-600 hover:text-indigo-500'
+  cleanButton.className =
+    'font-medium text-indigo-600 hover:text-indigo-500 ml-2'
   KittensContainer.className =
     'grid items-center justify-center grid-cols-[repeat(auto-fit,_minmax(200px,_250px))]'
 
@@ -62,7 +63,7 @@ const WorkShop2 = async () => {
   // adding events
   addCatButton.addEventListener('click', () => addCat(KittensContainer))
   cleanButton.addEventListener('click', () => {
-    KittensComponent.remove()
+    KittensContainer.innerHTML = ''
   })
 
   //adding childes
